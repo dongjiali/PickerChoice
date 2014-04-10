@@ -1,0 +1,519 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CD8D143718ED5284004E2520 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD8D143618ED5284004E2520 /* Foundation.framework */; };
+		CD8D143918ED5284004E2520 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD8D143818ED5284004E2520 /* CoreGraphics.framework */; };
+		CD8D143B18ED5284004E2520 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD8D143A18ED5284004E2520 /* UIKit.framework */; };
+		CD8D144118ED5285004E2520 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CD8D143F18ED5285004E2520 /* InfoPlist.strings */; };
+		CD8D144318ED5285004E2520 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CD8D144218ED5285004E2520 /* main.m */; };
+		CD8D144718ED5285004E2520 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CD8D144618ED5285004E2520 /* AppDelegate.m */; };
+		CD8D145218ED5285004E2520 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD8D145118ED5285004E2520 /* Images.xcassets */; };
+		CD8D145918ED5285004E2520 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD8D145818ED5285004E2520 /* XCTest.framework */; };
+		CD8D145A18ED5285004E2520 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD8D143618ED5284004E2520 /* Foundation.framework */; };
+		CD8D145B18ED5285004E2520 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD8D143A18ED5284004E2520 /* UIKit.framework */; };
+		CD8D146318ED5285004E2520 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CD8D146118ED5285004E2520 /* InfoPlist.strings */; };
+		CD8D146518ED5285004E2520 /* HNA_PickerViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CD8D146418ED5285004E2520 /* HNA_PickerViewTests.m */; };
+		CD8D147118ED52FD004E2520 /* HNAPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = CD8D147018ED52FD004E2520 /* HNAPickerView.m */; };
+		CD8D147A18ED7DDF004E2520 /* HNAPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = CD8D147918ED7DDF004E2520 /* HNAPicker.m */; };
+		CD8D147D18ED7E29004E2520 /* HNAPickerCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = CD8D147C18ED7E29004E2520 /* HNAPickerCollectionView.m */; };
+		CD8D148018ED7E62004E2520 /* HNAPickerCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CD8D147F18ED7E62004E2520 /* HNAPickerCollectionViewCell.m */; };
+		CD8D148318ED7F58004E2520 /* HNAPickerCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = CD8D148218ED7F58004E2520 /* HNAPickerCollectionViewFlowLayout.m */; };
+		CDB638F818F37FD50028CEC4 /* HNAPickerDateSource.m in Sources */ = {isa = PBXBuildFile; fileRef = CDB638F718F37FD50028CEC4 /* HNAPickerDateSource.m */; };
+		CDB638FB18F3CEAF0028CEC4 /* HnapickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDB638FA18F3CEAF0028CEC4 /* HnapickerViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CD8D145C18ED5285004E2520 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CD8D142B18ED5284004E2520 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CD8D143218ED5284004E2520;
+			remoteInfo = HNA_PickerView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CD8D143318ED5284004E2520 /* HNA_PickerView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HNA_PickerView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD8D143618ED5284004E2520 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		CD8D143818ED5284004E2520 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		CD8D143A18ED5284004E2520 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		CD8D143E18ED5285004E2520 /* HNA_PickerView-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HNA_PickerView-Info.plist"; sourceTree = "<group>"; };
+		CD8D144018ED5285004E2520 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CD8D144218ED5285004E2520 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CD8D144418ED5285004E2520 /* HNA_PickerView-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HNA_PickerView-Prefix.pch"; sourceTree = "<group>"; };
+		CD8D144518ED5285004E2520 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		CD8D144618ED5285004E2520 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		CD8D145118ED5285004E2520 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		CD8D145718ED5285004E2520 /* HNA_PickerViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HNA_PickerViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD8D145818ED5285004E2520 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		CD8D146018ED5285004E2520 /* HNA_PickerViewTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HNA_PickerViewTests-Info.plist"; sourceTree = "<group>"; };
+		CD8D146218ED5285004E2520 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CD8D146418ED5285004E2520 /* HNA_PickerViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HNA_PickerViewTests.m; sourceTree = "<group>"; };
+		CD8D146F18ED52FD004E2520 /* HNAPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNAPickerView.h; sourceTree = "<group>"; };
+		CD8D147018ED52FD004E2520 /* HNAPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HNAPickerView.m; sourceTree = "<group>"; };
+		CD8D147818ED7DDF004E2520 /* HNAPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNAPicker.h; sourceTree = "<group>"; };
+		CD8D147918ED7DDF004E2520 /* HNAPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HNAPicker.m; sourceTree = "<group>"; };
+		CD8D147B18ED7E29004E2520 /* HNAPickerCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNAPickerCollectionView.h; sourceTree = "<group>"; };
+		CD8D147C18ED7E29004E2520 /* HNAPickerCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HNAPickerCollectionView.m; sourceTree = "<group>"; };
+		CD8D147E18ED7E62004E2520 /* HNAPickerCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNAPickerCollectionViewCell.h; sourceTree = "<group>"; };
+		CD8D147F18ED7E62004E2520 /* HNAPickerCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HNAPickerCollectionViewCell.m; sourceTree = "<group>"; };
+		CD8D148118ED7F58004E2520 /* HNAPickerCollectionViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNAPickerCollectionViewFlowLayout.h; sourceTree = "<group>"; };
+		CD8D148218ED7F58004E2520 /* HNAPickerCollectionViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HNAPickerCollectionViewFlowLayout.m; sourceTree = "<group>"; };
+		CDAE919418F6736600F5C469 /* HNAPickerMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HNAPickerMacro.h; sourceTree = "<group>"; };
+		CDB638F618F37FD50028CEC4 /* HNAPickerDateSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNAPickerDateSource.h; sourceTree = "<group>"; };
+		CDB638F718F37FD50028CEC4 /* HNAPickerDateSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HNAPickerDateSource.m; sourceTree = "<group>"; };
+		CDB638F918F3CEAF0028CEC4 /* HnapickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HnapickerViewController.h; sourceTree = "<group>"; };
+		CDB638FA18F3CEAF0028CEC4 /* HnapickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HnapickerViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CD8D143018ED5284004E2520 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD8D143918ED5284004E2520 /* CoreGraphics.framework in Frameworks */,
+				CD8D143B18ED5284004E2520 /* UIKit.framework in Frameworks */,
+				CD8D143718ED5284004E2520 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD8D145418ED5285004E2520 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD8D145918ED5285004E2520 /* XCTest.framework in Frameworks */,
+				CD8D145B18ED5285004E2520 /* UIKit.framework in Frameworks */,
+				CD8D145A18ED5285004E2520 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CD8D142A18ED5284004E2520 = {
+			isa = PBXGroup;
+			children = (
+				CD8D143C18ED5285004E2520 /* HNA_PickerView */,
+				CD8D145E18ED5285004E2520 /* HNA_PickerViewTests */,
+				CD8D143518ED5284004E2520 /* Frameworks */,
+				CD8D143418ED5284004E2520 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CD8D143418ED5284004E2520 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CD8D143318ED5284004E2520 /* HNA_PickerView.app */,
+				CD8D145718ED5285004E2520 /* HNA_PickerViewTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CD8D143518ED5284004E2520 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CD8D143618ED5284004E2520 /* Foundation.framework */,
+				CD8D143818ED5284004E2520 /* CoreGraphics.framework */,
+				CD8D143A18ED5284004E2520 /* UIKit.framework */,
+				CD8D145818ED5285004E2520 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CD8D143C18ED5285004E2520 /* HNA_PickerView */ = {
+			isa = PBXGroup;
+			children = (
+				CD8D146E18ED52BF004E2520 /* hna_pickerView */,
+				CD8D144518ED5285004E2520 /* AppDelegate.h */,
+				CD8D144618ED5285004E2520 /* AppDelegate.m */,
+				CDB638F918F3CEAF0028CEC4 /* HnapickerViewController.h */,
+				CDB638FA18F3CEAF0028CEC4 /* HnapickerViewController.m */,
+				CD8D145118ED5285004E2520 /* Images.xcassets */,
+				CD8D143D18ED5285004E2520 /* Supporting Files */,
+			);
+			path = HNA_PickerView;
+			sourceTree = "<group>";
+		};
+		CD8D143D18ED5285004E2520 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CD8D143E18ED5285004E2520 /* HNA_PickerView-Info.plist */,
+				CD8D143F18ED5285004E2520 /* InfoPlist.strings */,
+				CD8D144218ED5285004E2520 /* main.m */,
+				CD8D144418ED5285004E2520 /* HNA_PickerView-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CD8D145E18ED5285004E2520 /* HNA_PickerViewTests */ = {
+			isa = PBXGroup;
+			children = (
+				CD8D146418ED5285004E2520 /* HNA_PickerViewTests.m */,
+				CD8D145F18ED5285004E2520 /* Supporting Files */,
+			);
+			path = HNA_PickerViewTests;
+			sourceTree = "<group>";
+		};
+		CD8D145F18ED5285004E2520 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CD8D146018ED5285004E2520 /* HNA_PickerViewTests-Info.plist */,
+				CD8D146118ED5285004E2520 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CD8D146E18ED52BF004E2520 /* hna_pickerView */ = {
+			isa = PBXGroup;
+			children = (
+				CD8D146F18ED52FD004E2520 /* HNAPickerView.h */,
+				CD8D147018ED52FD004E2520 /* HNAPickerView.m */,
+				CD8D147818ED7DDF004E2520 /* HNAPicker.h */,
+				CD8D147918ED7DDF004E2520 /* HNAPicker.m */,
+				CD8D147B18ED7E29004E2520 /* HNAPickerCollectionView.h */,
+				CD8D147C18ED7E29004E2520 /* HNAPickerCollectionView.m */,
+				CD8D147E18ED7E62004E2520 /* HNAPickerCollectionViewCell.h */,
+				CD8D147F18ED7E62004E2520 /* HNAPickerCollectionViewCell.m */,
+				CD8D148118ED7F58004E2520 /* HNAPickerCollectionViewFlowLayout.h */,
+				CD8D148218ED7F58004E2520 /* HNAPickerCollectionViewFlowLayout.m */,
+				CDB638F618F37FD50028CEC4 /* HNAPickerDateSource.h */,
+				CDB638F718F37FD50028CEC4 /* HNAPickerDateSource.m */,
+				CDAE919418F6736600F5C469 /* HNAPickerMacro.h */,
+			);
+			name = hna_pickerView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CD8D143218ED5284004E2520 /* HNA_PickerView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD8D146818ED5285004E2520 /* Build configuration list for PBXNativeTarget "HNA_PickerView" */;
+			buildPhases = (
+				CD8D142F18ED5284004E2520 /* Sources */,
+				CD8D143018ED5284004E2520 /* Frameworks */,
+				CD8D143118ED5284004E2520 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HNA_PickerView;
+			productName = HNA_PickerView;
+			productReference = CD8D143318ED5284004E2520 /* HNA_PickerView.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CD8D145618ED5285004E2520 /* HNA_PickerViewTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD8D146B18ED5285004E2520 /* Build configuration list for PBXNativeTarget "HNA_PickerViewTests" */;
+			buildPhases = (
+				CD8D145318ED5285004E2520 /* Sources */,
+				CD8D145418ED5285004E2520 /* Frameworks */,
+				CD8D145518ED5285004E2520 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CD8D145D18ED5285004E2520 /* PBXTargetDependency */,
+			);
+			name = HNA_PickerViewTests;
+			productName = HNA_PickerViewTests;
+			productReference = CD8D145718ED5285004E2520 /* HNA_PickerViewTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CD8D142B18ED5284004E2520 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = HaiHangHui;
+				TargetAttributes = {
+					CD8D145618ED5285004E2520 = {
+						TestTargetID = CD8D143218ED5284004E2520;
+					};
+				};
+			};
+			buildConfigurationList = CD8D142E18ED5284004E2520 /* Build configuration list for PBXProject "HNA_PickerView" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CD8D142A18ED5284004E2520;
+			productRefGroup = CD8D143418ED5284004E2520 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CD8D143218ED5284004E2520 /* HNA_PickerView */,
+				CD8D145618ED5285004E2520 /* HNA_PickerViewTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CD8D143118ED5284004E2520 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD8D145218ED5285004E2520 /* Images.xcassets in Resources */,
+				CD8D144118ED5285004E2520 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD8D145518ED5285004E2520 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD8D146318ED5285004E2520 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CD8D142F18ED5284004E2520 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD8D148318ED7F58004E2520 /* HNAPickerCollectionViewFlowLayout.m in Sources */,
+				CD8D144718ED5285004E2520 /* AppDelegate.m in Sources */,
+				CD8D147118ED52FD004E2520 /* HNAPickerView.m in Sources */,
+				CD8D148018ED7E62004E2520 /* HNAPickerCollectionViewCell.m in Sources */,
+				CDB638F818F37FD50028CEC4 /* HNAPickerDateSource.m in Sources */,
+				CD8D144318ED5285004E2520 /* main.m in Sources */,
+				CDB638FB18F3CEAF0028CEC4 /* HnapickerViewController.m in Sources */,
+				CD8D147A18ED7DDF004E2520 /* HNAPicker.m in Sources */,
+				CD8D147D18ED7E29004E2520 /* HNAPickerCollectionView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD8D145318ED5285004E2520 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD8D146518ED5285004E2520 /* HNA_PickerViewTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CD8D145D18ED5285004E2520 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CD8D143218ED5284004E2520 /* HNA_PickerView */;
+			targetProxy = CD8D145C18ED5285004E2520 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CD8D143F18ED5285004E2520 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CD8D144018ED5285004E2520 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		CD8D146118ED5285004E2520 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CD8D146218ED5285004E2520 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CD8D146618ED5285004E2520 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: LI LEI (33ZZ8SWCD6)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: LI LEI (33ZZ8SWCD6)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "A795B9E1-17FA-4BE9-AF1C-608B77BD6CB2";
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		CD8D146718ED5285004E2520 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: LI LEI (33ZZ8SWCD6)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: LI LEI (33ZZ8SWCD6)";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PROVISIONING_PROFILE = "A795B9E1-17FA-4BE9-AF1C-608B77BD6CB2";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CD8D146918ED5285004E2520 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: LI LEI (33ZZ8SWCD6)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: LI LEI (33ZZ8SWCD6)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HNA_PickerView/HNA_PickerView-Prefix.pch";
+				INFOPLIST_FILE = "HNA_PickerView/HNA_PickerView-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "A795B9E1-17FA-4BE9-AF1C-608B77BD6CB2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		CD8D146A18ED5285004E2520 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: LI LEI (33ZZ8SWCD6)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: LI LEI (33ZZ8SWCD6)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HNA_PickerView/HNA_PickerView-Prefix.pch";
+				INFOPLIST_FILE = "HNA_PickerView/HNA_PickerView-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "A795B9E1-17FA-4BE9-AF1C-608B77BD6CB2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		CD8D146C18ED5285004E2520 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/HNA_PickerView.app/HNA_PickerView";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HNA_PickerView/HNA_PickerView-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "HNA_PickerViewTests/HNA_PickerViewTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		CD8D146D18ED5285004E2520 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/HNA_PickerView.app/HNA_PickerView";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HNA_PickerView/HNA_PickerView-Prefix.pch";
+				INFOPLIST_FILE = "HNA_PickerViewTests/HNA_PickerViewTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CD8D142E18ED5284004E2520 /* Build configuration list for PBXProject "HNA_PickerView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD8D146618ED5285004E2520 /* Debug */,
+				CD8D146718ED5285004E2520 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD8D146818ED5285004E2520 /* Build configuration list for PBXNativeTarget "HNA_PickerView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD8D146918ED5285004E2520 /* Debug */,
+				CD8D146A18ED5285004E2520 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD8D146B18ED5285004E2520 /* Build configuration list for PBXNativeTarget "HNA_PickerViewTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD8D146C18ED5285004E2520 /* Debug */,
+				CD8D146D18ED5285004E2520 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CD8D142B18ED5284004E2520 /* Project object */;
+}
