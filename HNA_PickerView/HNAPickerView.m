@@ -33,7 +33,7 @@
 {
     if(self = [super init])
     {
-        self.pickerView = [[HNAPicker alloc]initWithFrame:self.view.frame];
+        self.pickerView = [[HNAPicker alloc]initWithFrame:[UIScreen mainScreen].bounds];
         _pickerView.backgroundColor = [UIColor clearColor];
         [_pickerView selectedDone:^(NSArray *item) {
             if (item) {
