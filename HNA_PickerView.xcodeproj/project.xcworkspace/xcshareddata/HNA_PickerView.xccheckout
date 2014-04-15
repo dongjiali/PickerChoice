@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>C948693B-652A-41D5-923A-D5A75F68375E</string>
+	<key>IDESourceControlProjectName</key>
+	<string>HNA_PickerView</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>E9E655F0-E8CE-47D8-AE9B-77089FE3EA66</key>
+		<string>https://github.com/dongjiali/PickerChoice.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>HNA_PickerView.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>E9E655F0-E8CE-47D8-AE9B-77089FE3EA66</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/dongjiali/PickerChoice.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>E9E655F0-E8CE-47D8-AE9B-77089FE3EA66</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>E9E655F0-E8CE-47D8-AE9B-77089FE3EA66</string>
+			<key>IDESourceControlWCCName</key>
+			<string>PickerChoice</string>
+		</dict>
+	</array>
+</dict>
+</plist>
