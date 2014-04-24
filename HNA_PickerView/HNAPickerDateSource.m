@@ -8,9 +8,9 @@
 
 #import "HNAPickerDateSource.h"
 #define YESTSPACEYEAR 100
-#define LASTSPACEYEAR 10
-int StartYear = 0;
-int EndYear = 0;
+#define LASTSPACEYEAR 20
+long StartYear = 0;
+long EndYear = 0;
 
 @implementation HNAPickerDateSource
 - (id)init
@@ -35,18 +35,18 @@ int EndYear = 0;
     NSSecondCalendarUnit;
     self.components = [_calendar components:unitFlags fromDate:[NSDate new]];
     //初始化起始日期
-    [resultDate addObject:[NSString stringWithFormat:@"%d", self.components.year]];
-    [resultDate addObject:[NSString stringWithFormat:@"%d", self.components.month]];
-    [resultDate addObject:[NSString stringWithFormat:@"%d", self.components.day]];
-    int year = self.components.year;
+    [resultDate addObject:[NSString stringWithFormat:@"%ld", (long)self.components.year]];
+    [resultDate addObject:[NSString stringWithFormat:@"%ld", (long)self.components.month]];
+    [resultDate addObject:[NSString stringWithFormat:@"%ld", (long)self.components.day]];
+    long year = self.components.year;
     StartYear = year - YESTSPACEYEAR;
     
     EndYear = year + LASTSPACEYEAR;
     
     
-    for (int i = StartYear; i <= EndYear; i++) {
+    for (long i = StartYear; i <= EndYear; i++) {
         
-        [years addObject:[NSString stringWithFormat:@"%d", i]];
+        [years addObject:[NSString stringWithFormat:@"%ld", i]];
     }
     
     return years;

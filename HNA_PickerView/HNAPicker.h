@@ -21,7 +21,6 @@ typedef void (^SelectedDoneBlock)(NSArray *item);
 @interface HNAPicker : UIView<UICollectionViewDelegate>
 @property (nonatomic, assign)PickerType pickerType;
 @property (nonatomic, strong)NSArray *itemsDataSource;
-@property (nonatomic, strong)SelectedDoneBlock block;
 
 - (void)selectedDone:(SelectedDoneBlock)block;
 - (void)setScrollViewContent;

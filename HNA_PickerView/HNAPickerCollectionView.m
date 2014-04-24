@@ -41,7 +41,7 @@
     HNAPickerCollectionViewCell *cell = [cv dequeueReusableCellWithReuseIdentifier:@"MY_CELL" forIndexPath:indexPath];
     if (indexPath) {
         cell.cellLabel.text = self.cellItemArray[indexPath.row];
-        [cell.cellLabel setTextColor:indexPath.row == _selectedItemTag?[UIColor whiteColor]:[UIColor blackColor]];
+        [cell.cellLabel setTextColor:indexPath.row == _selectedItemTag?WHITE_COLOR:TEXT_COLOR];
     }
     return cell;
 }

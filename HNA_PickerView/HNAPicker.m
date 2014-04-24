@@ -17,6 +17,7 @@
     HNAPickerDateSource *pickerDateScource;
     
 }
+@property (readwrite ,nonatomic, copy)SelectedDoneBlock block;
 @property (nonatomic, strong)NSMutableArray *pickerDataArray;
 @property (nonatomic, strong)NSMutableArray *resultDataArray;
 @property (nonatomic, strong)NSMutableArray *HNAPickerArray;
@@ -29,7 +30,7 @@
 
 - (id)init
 {
-   return [self initWithFrame:[UIScreen mainScreen].bounds];
+    return [self initWithFrame:[UIScreen mainScreen].bounds];
 }
 
 - (id)initWithFrame:(CGRect)frame
@@ -49,14 +50,14 @@
 
 #pragma -mark- init
 - (void)initialize{
-//    if (self.pickerType == PickertypeDate ) {
-//        [self initPickerDateSource];
-//        self.pickerTitleText = @"请选择出生日期";
-//    }
-//    else{
-//        [self initItemDataSource:pickerData Section:section];
-//        self.pickerTitleText = @"请选择";
-//    }
+    //    if (self.pickerType == PickertypeDate ) {
+    //        [self initPickerDateSource];
+    //        self.pickerTitleText = @"请选择出生日期";
+    //    }
+    //    else{
+    //        [self initItemDataSource:pickerData Section:section];
+    //        self.pickerTitleText = @"请选择";
+    //    }
 }
 
 - (void)setItemsDataSource:(NSArray *)itemsDataSource
@@ -193,39 +194,35 @@
 - (void)addGradientLayer:(UIView *)subView
 {
     CAGradientLayer *gradientLayerTop = [CAGradientLayer layer];
-    gradientLayerTop.frame = CGRectMake(0.0, 0.0, subView.frame.size.width, PICKERVIEWHEIGHT/2.0);
-    gradientLayerTop.colors = [NSArray arrayWithObjects:(id)[UIColor colorWithWhite:1.0 alpha:0.0].CGColor, subView.backgroundColor.CGColor, nil];
-    gradientLayerTop.startPoint = CGPointMake(0.0f, 0.7f);
-    gradientLayerTop.endPoint = CGPointMake(0.0f, 0.0f);
+    if (gradientLayerTop) {
+        gradientLayerTop.frame = CGRectMake(0.0, 0.0, subView.frame.size.width, PICKERVIEWHEIGHT/2.0);
+        gradientLayerTop.colors = [NSArray arrayWithObjects:(id)[UIColor colorWithWhite:1.0 alpha:0.0].CGColor, subView.backgroundColor.CGColor, nil];
+        gradientLayerTop.startPoint = CGPointMake(0.0f, 0.7f);
+        gradientLayerTop.endPoint = CGPointMake(0.0f, 0.0f);
+        //Add gradients
+        [subView.layer addSublayer:gradientLayerTop];
+    }
+
     
     CAGradientLayer *gradientLayerBottom = [CAGradientLayer layer];
-    gradientLayerBottom.frame = CGRectMake(0.0, PICKERVIEWHEIGHT/2.0, subView.frame.size.width, PICKERVIEWHEIGHT/2.0);
-    gradientLayerBottom.colors = gradientLayerTop.colors;
-    gradientLayerBottom.startPoint = CGPointMake(0.0f, 0.3f);
-    gradientLayerBottom.endPoint = CGPointMake(0.0f, 1.0f);
-    
-    //Add gradients
-    [subView.layer addSublayer:gradientLayerTop];
-    [subView.layer addSublayer:gradientLayerBottom];
+    if (gradientLayerBottom) {
+        gradientLayerBottom.frame = CGRectMake(0.0, PICKERVIEWHEIGHT/2.0, subView.frame.size.width, PICKERVIEWHEIGHT/2.0);
+        gradientLayerBottom.colors = gradientLayerTop.colors;
+        gradientLayerBottom.startPoint = CGPointMake(0.0f, 0.25f);
+        gradientLayerBottom.endPoint = CGPointMake(0.0f, 1.0f);
+        
+        [subView.layer addSublayer:gradientLayerBottom];
+    }
 }
 
-#pragma -mark- set scroll 
-
-- (void)setContentScrollViewSelected:(HNAPickerCollectionView *)scrollView
-{
-    int pointNum = [scrollView.cellItemArray indexOfObject:_resultDataArray[scrollView.tag]];
-    
-    scrollView.selectedItemTag = pointNum;
-    double contentY = pointNum * ITEM_HEIGHT - 2*ITEM_HEIGHT;
-    [scrollView setContentOffset:CGPointMake(0, contentY)];
-}
+#pragma -mark- set scroll
 
 - (void)setScrollViewContent
 {
     for (int i = 0 ; i < self.HNAPickerArray.count; i++) {
         HNAPickerCollectionView *pickerView = (HNAPickerCollectionView *)_HNAPickerArray[i];
         
-        int pointNum = [pickerView.cellItemArray indexOfObject:_resultDataArray[pickerView.tag]];
+        NSUInteger pointNum = [pickerView.cellItemArray indexOfObject:_resultDataArray[pickerView.tag]];
         pickerView.selectedItemTag = pointNum;
         double contentY = pointNum * ITEM_HEIGHT - 2*ITEM_HEIGHT;
         [pickerView setContentOffset:CGPointMake(0, contentY)];
@@ -233,6 +230,17 @@
             [pickerView reloadData];
         });    }
     _doneButton.enabled = YES;
+}
+
+- (BOOL)checkScrollViewContent:(UIScrollView *)scroll
+{
+    if (scroll.contentOffset.y < - scroll.contentInset.top) {
+        return NO;
+    }
+    if (scroll.contentOffset.y > scroll.contentSize.height - scroll.contentInset.top - scroll.contentInset.bottom + ITEM_HEIGHT) {
+        return NO;
+    }
+    return YES;
 }
 
 #pragma -mark- init picker date data
@@ -255,38 +263,65 @@
     }
 }
 
-- (void)setResultDataArrayValue
+- (NSArray *)setResultDataArrayValue
 {
     for (int i = 0 ; i < self.HNAPickerArray.count; i++) {
         HNAPickerCollectionView *pickerView = (HNAPickerCollectionView *)self.HNAPickerArray[i];
         [_resultDataArray replaceObjectAtIndex:pickerView.tag withObject:pickerView.cellItemArray[pickerView.selectedItemTag]];
     }
+    return _resultDataArray;
+}
+
+- (NSMutableArray *)dateFormatter:(NSArray *)array
+{
+    NSMutableArray *resultArray = [NSMutableArray array];
+    if (_pickerType == PickertypeDate) {
+        for (int i = 0; i<array.count; i++) {
+            if ([array[i] intValue] < 10) {
+                [resultArray addObject:[NSString stringWithFormat:@"0%@",array[i]]];
+            }else
+            {
+                [resultArray addObject:array[i]];
+            }
+        }
+    }
+    
+    if (_pickerType == PickertypeItem) {
+        resultArray = [array copy];
+    }
+    return resultArray;
 }
 
 #pragma mark - UIScrollViewDelegate
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
-    [self centerValueForScrollView:(HNAPickerCollectionView *)scrollView];
-    if (self.pickerType == PickertypeDate) {
-        [self getDaysInYearAndMonth:(HNAPickerCollectionView *)scrollView];
+
+    if ([self checkScrollViewContent:scrollView]) {
+        [self centerValueForScrollView:(HNAPickerCollectionView *)scrollView];
+        if (self.pickerType == PickertypeDate) {
+            [self getDaysInYearAndMonth:(HNAPickerCollectionView *)scrollView];
+        }
+        _doneButton.enabled = YES;
     }
-    _doneButton.enabled = YES;
 }
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
+    
     HNAPickerCollectionView *cv = (HNAPickerCollectionView *)scrollView;
     [cv highlightCellWithIndexPathRow:-1];
-}
-
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView
-{
+    
     _doneButton.enabled = NO;
 }
+
+//- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+//{
+//    
+//}
 
 - (void)centerValueForScrollView:(HNAPickerCollectionView *)scrollView {
     float offset = scrollView.contentOffset.y;
     offset += (scrollView.contentInset.top);
-    NSInteger indexPathRow = (int)(offset/ITEM_HEIGHT);
+    NSInteger indexPathRow = (NSInteger)(offset/ITEM_HEIGHT);
     [scrollView highlightCellWithIndexPathRow:indexPathRow];
 }
 
@@ -306,13 +341,14 @@
         if (monthTableView.selectedItemTag >= monthTableView.cellItemArray.count ) {
             monthTableView.selectedItemTag = monthTableView.cellItemArray.count - 1;
         }
-        int year = [yearTableView.cellItemArray[yearTableView.selectedItemTag] integerValue];
-        int month = [monthTableView.cellItemArray[monthTableView.selectedItemTag] integerValue];
-        NSArray *daysArray = [pickerDateScource getDaysInMonth:[pickerDateScource convertToDateDay:1 month:month year:year]];
+        NSInteger year = [yearTableView.cellItemArray[yearTableView.selectedItemTag] integerValue];
+        NSInteger month = [monthTableView.cellItemArray[monthTableView.selectedItemTag] integerValue];
+        NSArray *daysArray = [pickerDateScource getDaysInMonth:[pickerDateScource convertToDateDay:1 month:(int)month year:(int)year]];
         [_pickerDataArray replaceObjectAtIndex:2 withObject:daysArray];
         dayTableView.cellItemArray = daysArray;
-
-        [dayTableView reloadData];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [dayTableView reloadData];
+        });
         if (dayTableView.selectedItemTag >= dayTableView.cellItemArray.count) {
             dayTableView.selectedItemTag = dayTableView.cellItemArray.count - 1;
         }
@@ -326,7 +362,7 @@
     {
         if (button == _doneButton ) {
             [self setResultDataArrayValue];
-            self.block(_resultDataArray);
+            self.block([self dateFormatter:_resultDataArray]);
         }else
         {
             self.block(nil);

@@ -20,7 +20,7 @@
         self.cellLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0, 0.0, frame.size.width, frame.size.height)];
         self.cellLabel.autoresizingMask = UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth;
         self.cellLabel.textAlignment = NSTextAlignmentCenter;
-        self.cellLabel.font = [UIFont systemFontOfSize:20.0];
+        self.cellLabel.font = [UIFont systemFontOfSize:17.0];
         self.cellLabel.backgroundColor = [UIColor clearColor];
         self.cellLabel.textColor = TEXT_COLOR;
         self.selected = NO;
